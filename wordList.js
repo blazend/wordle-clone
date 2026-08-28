@@ -1,6 +1,6 @@
 const WORD_LIST = [
    
-    
+"vince",    
 "amiel",
 "aback",
 "abase",
