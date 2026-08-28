@@ -9,7 +9,7 @@ let currentRow = 0;
 let currentColumn = 0;
 
 
-const targetWord = "amiel";
+const targetWord = "vince";
 const targetLetters = Array.from(targetWord);
 
 
