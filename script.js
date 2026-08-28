@@ -86,7 +86,7 @@ function checkGuess() {
 
         if (index !== -1) { 
             tile.classList.add("present");
-            targetCopy.indexOf("e");
+            targetCopy[index] = null
         } else {
             tile.classList.add("absent")
         }
@@ -95,10 +95,17 @@ function checkGuess() {
 
     //winning ig
     if (currentGuess === targetWord) {
-        alert(response2)
-        
-        return
-    }
+    alert(response2);
+    window.removeEventListener("keydown", handlekeydown); // Stop inputs
+    return;
+}
+
+// Also check for game over (loss) when rows are exhausted:
+if (currentRow === rows - 1) {
+    alert(`Game over! The word was ${targetWord.toUpperCase()}`);
+    window.removeEventListener("keydown", handlekeydown);
+    return;
+}
 
     currentRow++;
     currentColumn = 0;
